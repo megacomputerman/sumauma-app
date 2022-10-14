@@ -14,7 +14,7 @@ import devtitans.smartlampmanager.SmartlampManager;                          // 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "DevTITANS.SmartlampApp";
 
-    private TextView textStatus, textLuminosity;
+    private TextView textStatus, textLuminosity, textTemp;
     private EditText editLed;
     private SmartlampManager manager;                                        // Atributo para o Manager
 
@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textStatus =     findViewById(R.id.textStatus);                      // Acessa os componentes da tela
+        textStatus     = findViewById(R.id.textStatus);                      // Acessa os componentes da tela
         textLuminosity = findViewById(R.id.textLuminosity);
-        editLed =        findViewById(R.id.editLed);
+        editLed        = findViewById(R.id.editLed);
+        textTemp       = findViewById(R.id.textTemp);
 
         manager = SmartlampManager.getInstance();
 
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         try {
             int luminosity = manager.getLuminosity();                        // Executa o método getLuminosity via manager
             textLuminosity.setText(String.valueOf(luminosity));
+
+            int iTemp = manager.getTemp();           // Executa o método getLuminosity via manager
+            textTemp.setText(String.valueOf(iTemp));
 
             int led = manager.getLed();                                      // Executa o método getLed via manager
             editLed.setText(String.valueOf(led));
