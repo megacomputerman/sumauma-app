@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
+        android:layout_marginBottom="67dp"
         android:text="Agromito system"
         android:textColor="#4e2358"
         android:textSize="24dp"
@@ -130,6 +131,7 @@
             app:layout_constraintTop_toTopOf="@id/labelLed" />
 
         //temperatura
+
         <TextView
             android:id="@+id/labelTemp"
             android:layout_width="wrap_content"
@@ -162,6 +164,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="20dp" />
+
+        //Umidade
+
+        <TextView
+            android:id="@+id/labelUmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Umidade:"
+            android:textColor="#4e2358"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/labelTemp"
+            app:layout_constraintTop_toTopOf="@id/labelTemp" />
+
+        <TextView
+            android:id="@+id/textUmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="84dp"
+            android:textColor="#c47e00"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintLeft_toLeftOf="@id/labelTemp"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintVertical_bias="0.34" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -219,6 +247,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
